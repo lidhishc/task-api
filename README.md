@@ -45,9 +45,9 @@ Getting up and running is as easy as 1, 2, 3, 4.
 
 ## API - Pre-Requisites
 
-1. `Change the PORT by adding ` PORT `variable in` .env ` file`
+1. Change the PORT by adding ` PORT `variable in  `.env ` file
 
-2. `make sure pass `roleid `in` request header` `
+2. Make sure pass `roleid ` in ` request header`
 
     ```
     roleid=1 // admin
@@ -128,7 +128,7 @@ Base_URL: (http://localhost:3030)
 
 9. Create a Comment replay
 
-    `To create N'th level of replay just pass the parent comment id ad `comment_id` in the api request`
+    To create N'th level of replay just pass the parent comment id ad `comment_id` in the api request
 
     ```
     POST : /comment/replay
