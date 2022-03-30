@@ -10,8 +10,9 @@ Getting up and running is as easy as 1, 2, 3, 4.
     ```
 
 3. Configure Database
-    1. update `config.json` file in the config folder
-    2. example:
+    1. setup [PostgreSQL](https://www.postgresql.org/download/)
+    2. update `config.json` file in the config folder
+    3. example:
         ```
         {
             "development": {
@@ -45,7 +46,7 @@ Getting up and running is as easy as 1, 2, 3, 4.
 
 ## API - Pre-Requisites
 
-1. Change the PORT by adding ` PORT `variable in  `.env ` file
+1. Change the PORT by adding `PORT`variable in `.env ` file
 
 2. Make sure pass `roleid ` in ` request header`
 
