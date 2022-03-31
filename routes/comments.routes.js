@@ -11,7 +11,7 @@ router.get('/:id/blog', async (req, res) => {
         sendFailedResponse(res, 'Invalid blog id')
         return
     }
-    let query = `select id,comment,blog_id from comments where blog_id =$blogId `
+    let query = `select id,comment,blog_id from comments where blog_id =$blogId and parent_comment_id is null`
     let result = await sequelize.query(query, {
         bind: { blogId },
         type: QueryTypes.SELECT,
@@ -31,7 +31,7 @@ router.get('/:id/blog-orm', async (req, res) => {
         return
     }
     let result = await comments.findAll({
-        where: { blog_id: blogId },
+        where: { blog_id: blogId, parent_comment_id: null },
         attributes: ['id', 'comment', 'blog_id'],
     })
     if (!result) {
